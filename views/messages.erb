@@ -18,15 +18,28 @@
 
       <div class="message">
         <div class="to">
+          <h2>To:</h2>
+          <p>
+          <% @messages.each do |message| %>
+            <%= message.to %>
+          </p>
         </div>
         <div class="from">
+          <h2>From:</h2>
+          <p>
+            <%= message.from %>
+          </p>
         </div>
         <div class="content">
+          <p>
+            <%= message.content %>
+          </p>
         </div>
         <div class="time">
+          <%= message.created_at %>
+          <% end %>
         </div>
       </div>
-
     </div>
   </body>
 </html>
